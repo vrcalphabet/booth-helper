@@ -28,7 +28,11 @@
       "contents": [
         {
           "matches": ["//booth.pm/*/items/*", "//*.booth.pm/items/*"],
-          "js": "dist/popup.js"
+          "css": "test.css"
+        },
+        {
+          "matches": ["//booth.pm/*/items/*", "//*.booth.pm/items/*"],
+          "js": "preview.js"
         }
       ]
     },
