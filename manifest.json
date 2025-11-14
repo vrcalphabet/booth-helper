@@ -21,7 +21,7 @@
       "id": "item-preview",
       "name": "リンクホバーすると商品プレビュー出るやつ",
       "description": "リンクをホバーすると商品の詳細が見られます。",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "あるふぁべっと",
       "published_at": "2025-11-02",
       "updated_at": "2025-11-02",
@@ -37,10 +37,10 @@
       ]
     },
     {
-      "id": "hide-credit-information",
-      "name": "クレカ情報を非表示にするやつ",
+      "id": "aiueo",
+      "name": "あいうえお",
       "description": "決済画面に出てくる名義人とカード番号を非表示にします。",
-      "version": "1.0.0",
+      "version": "5.0.1",
       "author": "あるふぁべっと",
       "published_at": "2025-11-02",
       "updated_at": "2025-11-02",
