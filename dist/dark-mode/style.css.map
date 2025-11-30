@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/dark-mode/style.css"],
+  "sourcesContent": [".market-item-detail-article {\r\n  background-color: #262626;\r\n  color: white;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAC;AACC,oBAAkB;AAClB,SAAO;AACT;",
+  "names": []
+}

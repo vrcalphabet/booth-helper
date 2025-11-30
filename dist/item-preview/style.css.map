@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/item-preview/style.css"],
+  "sourcesContent": ["* {\r\n  color: pink;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,SAAO;AACT;",
+  "names": []
+}
