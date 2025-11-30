@@ -13,7 +13,8 @@
       "contents": [
         {
           "matches": [
-            "<all_pages>"
+            "//booth.pm/*/items/*",
+            "//*.booth.pm/items/*"
           ],
           "files": [
             "dist/dark-mode/style.css"
@@ -36,15 +37,7 @@
             "//*.booth.pm/items/*"
           ],
           "files": [
-            "dist/item-preview/style.css"
-          ]
-        },
-        {
-          "matches": [
-            "//booth.pm/*/items/*",
-            "//*.booth.pm/items/*"
-          ],
-          "files": [
+            "dist/item-preview/style.css",
             "dist/item-preview/preview.js"
           ]
         }

@@ -1,2 +1,8 @@
 /* src/hide-credit/style.css */
+[data-payment-type=pixivpay_gmo_card] > .typography-14 {
+  text-shadow: -9px 0 0 black, 9px 0 0 black;
+  filter: blur(9px);
+  opacity: 0.5;
+  user-select: none;
+}
 /*# sourceMappingURL=style.css.map */
