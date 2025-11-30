@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "default": "../manifest.schema.json"
+    },
+    "name": {
+      "type": "string",
+      "description": "この拡張機能パックの名前"
+    },
+    "items": {
+      "type": "array",
+      "description": "拡張機能の一覧",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "拡張機能のID",
+            "pattern": "^[\\w-]+$"
+          },
+          "name": {
+            "type": "string",
+            "description": "拡張機能の名前"
+          },
+          "description": {
+            "type": "string",
+            "description": "拡張機能の説明"
+          },
+          "version": {
+            "type": "string",
+            "description": "拡張機能のバージョン",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+          },
+          "author": {
+            "type": "string",
+            "description": "拡張機能の作成者"
+          },
+          "published_at": {
+            "type": "string",
+            "description": "拡張機能の公開日",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "updated_at": {
+            "type": "string",
+            "description": "拡張機能の更新日",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "connect": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "matches": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^(//(\\*\\.|[\\w-]+\\.)?booth\\.pm/(([\\w-]+|\\*)(/([\\w-]+|\\*))*)/?|\\<all_pages\\>)$"
+                  },
+                  "minItems": 1
+                },
+                "exclude_matches": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^//(\\*\\.|[\\w-]+\\.)?booth\\.pm/(([\\w-]+|\\*)(/([\\w-]+|\\*))*)/?$"
+                  }
+                },
+                "files": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^([\\w-]+/)*[\\w-]+\\.(js|ts|css|scss|sass)$"
+                  },
+                  "minItems": 1
+                }
+              },
+              "additionalProperties": false,
+              "required": ["matches"]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "version",
+          "author",
+          "published_at",
+          "updated_at",
+          "contents"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["name", "items"]
+}

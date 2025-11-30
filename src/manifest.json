@@ -1,19 +1,19 @@
 {
-  "$schema": "../booth-extension-manager/src/repo-schema.json",
+  "$schema": "../manifest.schema.json",
   "name": "ちょっとだけ使いやすくなる拡張機能セット",
   "items": [
     {
       "id": "dark-mode",
       "name": "サイトをダークモード化するやつ",
       "description": "BOOTHのサイトをダークモードにします。",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "author": "あるふぁべっと",
       "published_at": "2025-11-02",
       "updated_at": "2025-11-02",
       "contents": [
         {
-          "matches": ["<all_pages>"],
-          "css": "dist/dark-mode.css"
+          "matches": ["//booth.pm/*/items/*", "//*.booth.pm/items/*"],
+          "files": ["style.css"]
         }
       ]
     },
@@ -21,33 +21,29 @@
       "id": "item-preview",
       "name": "リンクホバーすると商品プレビュー出るやつ",
       "description": "リンクをホバーすると商品の詳細が見られます。",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "あるふぁべっと",
       "published_at": "2025-11-02",
       "updated_at": "2025-11-02",
       "contents": [
         {
           "matches": ["//booth.pm/*/items/*", "//*.booth.pm/items/*"],
-          "css": "test.css"
-        },
-        {
-          "matches": ["//booth.pm/*/items/*", "//*.booth.pm/items/*"],
-          "js": "preview.js"
+          "files": ["style.css", "preview.js"]
         }
       ]
     },
     {
-      "id": "hide-credit-card-info",
-      "name": "あいうえお",
+      "id": "hide-credit",
+      "name": "決済画面のカード情報を非表示にするやつ",
       "description": "決済画面に出てくる名義人とカード番号を非表示にします。",
-      "version": "1.0.1",
+      "version": "5.0.1",
       "author": "あるふぁべっと",
       "published_at": "2025-11-02",
       "updated_at": "2025-11-02",
       "contents": [
         {
           "matches": ["//checkout.booth.pm/checkout/step1"],
-          "css": "dist/hide-credit.css"
+          "files": ["style.css"]
         }
       ]
     }
