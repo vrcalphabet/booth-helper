@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/hide-nsfw/style.scss"],
+  "sourcesContent": [".item-card:has(.adult) {\r\n  :is(.adult, .item-card__title, .item-card__shop-name-anchor) {\r\n    filter: grayscale(1) blur(3px);\r\n  }\r\n  \r\n  .item-card__thumbnail-images {\r\n    filter: grayscale(1) blur(6px);\r\n  }\r\n}\r\n"],
+  "mappings": ";AACE,CAAA,SAAA,KAAA,CAAA,OAAA,IAAA,CAAA,OAAA,CAAA,kBAAA,CAAA;AACE,UAAA,UAAA,GAAA,KAAA;;AAGF,CAJA,SAIA,KAAA,CAJA,OAIA,CAAA;AACE,UAAA,UAAA,GAAA,KAAA;;",
+  "names": []
+}

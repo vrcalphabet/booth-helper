@@ -1,6 +1,9 @@
-/* src/dark-mode/style.css */
+/* src/dark-mode/style.scss */
 .market-item-detail-article {
   background-color: #262626;
+}
+.market-item-detail-article,
+.market-item-detail-article header {
   color: white;
 }
 /*# sourceMappingURL=style.css.map */

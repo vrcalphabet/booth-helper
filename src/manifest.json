@@ -13,7 +13,7 @@
       "contents": [
         {
           "matches": ["//booth.pm/*/items/*", "//*.booth.pm/items/*"],
-          "files": ["style.css"]
+          "files": ["style.scss"]
         }
       ]
     },
@@ -44,6 +44,21 @@
         {
           "matches": ["//checkout.booth.pm/checkout/step1"],
           "files": ["style.css"]
+        }
+      ]
+    },
+    {
+      "id": "hide-nsfw",
+      "name": "R-18商品をその場で非表示にするやつ",
+      "description": "R-18商品を非表示にするボタンを全てのページ上に設置します。",
+      "version": "1.0.0",
+      "author": "あるふぁべっと",
+      "published_at": "2025-12-01",
+      "updated_at": "2025-12-01",
+      "contents": [
+        {
+          "matches": ["<all_pages>"],
+          "files": ["style.scss"]
         }
       ]
     }

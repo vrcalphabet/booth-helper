@@ -61,6 +61,25 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hide-nsfw",
+      "name": "R-18商品をその場で非表示にするやつ",
+      "version": "1.0.0",
+      "author": "あるふぁべっと",
+      "description": "R-18商品を非表示にするボタンを全てのページ上に設置します。",
+      "published_at": "2025-12-01",
+      "updated_at": "2025-12-01",
+      "contents": [
+        {
+          "matches": [
+            "<all_pages>"
+          ],
+          "files": [
+            "dist/hide-nsfw/style.css"
+          ]
+        }
+      ]
     }
   ]
 }

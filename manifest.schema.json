@@ -84,7 +84,7 @@
                 }
               },
               "additionalProperties": false,
-              "required": ["matches"]
+              "required": ["matches", "files"]
             }
           }
         },

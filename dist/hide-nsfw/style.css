@@ -1,0 +1,8 @@
+/* src/hide-nsfw/style.scss */
+.item-card:has(.adult) :is(.adult, .item-card__title, .item-card__shop-name-anchor) {
+  filter: grayscale(1) blur(3px);
+}
+.item-card:has(.adult) .item-card__thumbnail-images {
+  filter: grayscale(1) blur(6px);
+}
+/*# sourceMappingURL=style.css.map */

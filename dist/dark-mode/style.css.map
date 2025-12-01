@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": ["../../src/dark-mode/style.css"],
-  "sourcesContent": [".market-item-detail-article {\r\n  background-color: #262626;\r\n  color: white;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAC;AACC,oBAAkB;AAClB,SAAO;AACT;",
+  "sources": ["../../src/dark-mode/style.scss"],
+  "sourcesContent": [".market-item-detail-article {\r\n  background-color: #262626;\r\n  \r\n  &, & header {\r\n    color: white;\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,oBAAA;;AAEA,CAHF;AAGE,CAHF,2BAGE;AACE,SAAA;;",
   "names": []
 }
