@@ -1,7 +1,7 @@
 {
   "$schema": "./manifest.schema.json",
   "name": "ちょっとだけ使いやすくなる拡張機能セット",
-  "items": [
+  "extensions": [
     {
       "id": "dark-mode",
       "name": "サイトをダークモード化するやつ",
