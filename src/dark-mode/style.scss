@@ -1,7 +1,19 @@
+.js-sticky-header {
+  background-color: #3a3a3a;
+
+  .items-stretch {
+    > .hidden,
+    #show_cart {
+      color: white;
+    }
+  }
+}
+
 .market-item-detail-article {
   background-color: #262626;
-  
-  &, & header {
+
+  &,
+  & header {
     color: white;
   }
 }

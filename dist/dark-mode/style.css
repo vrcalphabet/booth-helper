@@ -1,4 +1,11 @@
 /* src/dark-mode/style.scss */
+.js-sticky-header {
+  background-color: #3a3a3a;
+}
+.js-sticky-header .items-stretch > .hidden,
+.js-sticky-header .items-stretch #show_cart {
+  color: white;
+}
 .market-item-detail-article {
   background-color: #262626;
 }
@@ -6,4 +13,3 @@
 .market-item-detail-article header {
   color: white;
 }
-/*# sourceMappingURL=style.css.map */

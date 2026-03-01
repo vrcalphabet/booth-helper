@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest.schema.json",
   "name": "ちょっとだけ使いやすくなる拡張機能セット",
-  "items": [
+  "extensions": [
     {
       "id": "dark-mode",
       "name": "サイトをダークモード化するやつ",
@@ -49,8 +49,8 @@
     },
     {
       "id": "hide-nsfw",
-      "name": "R-18商品をその場で非表示にするやつ",
-      "description": "R-18商品を非表示にするボタンを全てのページ上に設置します。",
+      "name": "R-18商品をモザイクにするやつ",
+      "description": "R-18商品をモザイクにできます。",
       "version": "1.0.0",
       "author": "あるふぁべっと",
       "published_at": "2025-12-01",
@@ -59,6 +59,9 @@
         {
           "matches": ["<all_pages>"],
           "files": ["style.scss"]
+        },{
+          "matches": ["//booth.pm/ja"],
+          "files": ["scripts/main.tsx"]
         }
       ]
     }

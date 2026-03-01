@@ -5,4 +5,3 @@
 .item-card:has(.adult) .item-card__thumbnail-images {
   filter: grayscale(1) blur(6px);
 }
-/*# sourceMappingURL=style.css.map */

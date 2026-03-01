@@ -3,84 +3,75 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "type": "string",
-      "default": "../manifest.schema.json"
+      "type": "string"
     },
     "name": {
       "type": "string",
-      "description": "この拡張機能パックの名前"
+      "description": "このリポジトリ（拡張機能セット）の名称"
     },
-    "items": {
+    "extensions": {
       "type": "array",
-      "description": "拡張機能の一覧",
+      "minItems": 1,
+      "description": "このリポジトリに含まれる拡張機能の一覧",
       "items": {
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
-            "description": "拡張機能のID",
+            "description": "拡張機能のID。英数字・アンダーバー・ハイフンのみ。IDはリポジトリ内で重複不可です。",
             "pattern": "^[\\w-]+$"
           },
           "name": {
             "type": "string",
-            "description": "拡張機能の名前"
+            "description": "拡張機能の表示名"
           },
           "description": {
             "type": "string",
-            "description": "拡張機能の説明"
+            "description": "拡張機能の概要（何をする拡張機能か）"
           },
           "version": {
             "type": "string",
-            "description": "拡張機能のバージョン",
+            "description": "拡張機能のバージョン。`x.x.x` 形式。",
             "pattern": "^\\d+\\.\\d+\\.\\d+$"
           },
           "author": {
             "type": "string",
-            "description": "拡張機能の作成者"
+            "description": "拡張機能の作者名"
           },
           "published_at": {
             "type": "string",
-            "description": "拡張機能の公開日",
+            "description": "公開日。`yyyy-mm-dd` 形式。",
             "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
           },
           "updated_at": {
             "type": "string",
-            "description": "拡張機能の更新日",
+            "description": "更新日。`yyyy-mm-dd` 形式。",
             "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-          },
-          "connect": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "contents": {
             "type": "array",
+            "minItems": 1,
+            "description": "ページ上で読み込んで実行する JS/CSS の定義",
             "items": {
               "type": "object",
               "properties": {
                 "matches": {
                   "type": "array",
+                  "minItems": 1,
+                  "description": "読み込み対象のURLパターン。例: `//booth.pm/*/items/ja`、`//*.booth.pm/items/*`。",
                   "items": {
                     "type": "string",
                     "pattern": "^(//(\\*\\.|[\\w-]+\\.)?booth\\.pm/(([\\w-]+|\\*)(/([\\w-]+|\\*))*)/?|\\<all_pages\\>)$"
-                  },
-                  "minItems": 1
-                },
-                "exclude_matches": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "pattern": "^//(\\*\\.|[\\w-]+\\.)?booth\\.pm/(([\\w-]+|\\*)(/([\\w-]+|\\*))*)/?$"
                   }
                 },
                 "files": {
                   "type": "array",
+                  "minItems": 1,
+                  "description": "実行するファイルの、 `/src/拡張機能id` から見た相対パス。拡張子は `.js` `.jsx` `.ts` `.tsx` `.css` `.scss` `.sass` のいずれかを指定できます。",
                   "items": {
                     "type": "string",
-                    "pattern": "^([\\w-]+/)*[\\w-]+\\.(js|ts|css|scss|sass)$"
-                  },
-                  "minItems": 1
+                    "pattern": "^([\\w-]+/)*[\\w-]+\\.(js|jsx|ts|tsx|css|scss|sass)$"
+                  }
                 }
               },
               "additionalProperties": false,
@@ -102,5 +93,5 @@
     }
   },
   "additionalProperties": false,
-  "required": ["name", "items"]
+  "required": ["name", "extensions"]
 }
