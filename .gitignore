@@ -6,7 +6,6 @@ yarn-error.log*
 pnpm-debug.log*
 
 # TypeScript
-build/
 *.tsbuildinfo
 
 # 環境変数
@@ -25,6 +24,3 @@ coverage/
 *.log
 *.swp
 *.swo
-
-*.js
-*.js.map
