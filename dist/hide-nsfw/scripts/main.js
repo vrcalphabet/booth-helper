@@ -252,10 +252,11 @@
 
   // src/hide-nsfw/scripts/App.tsx
   function App() {
-    return /* @__PURE__ */ preact.h("div", null, "Hello, PReact!");
+    return /* @__PURE__ */ _("div", null, "Hello, PReact!");
   }
   var init_App = __esm({
     "src/hide-nsfw/scripts/App.tsx"() {
+      init_preact_module();
     }
   });
 
@@ -268,7 +269,7 @@
       console.log(root);
       var div = document.createElement("div");
       root.prepend(div);
-      J(/* @__PURE__ */ preact.h(App, null), div);
+      J(/* @__PURE__ */ _(App, null), div);
     }
   });
   require_main();
