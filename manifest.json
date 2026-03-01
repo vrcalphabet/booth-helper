@@ -1,5 +1,4 @@
 {
-  "$schema": "./manifest.schema.json",
   "name": "ちょっとだけ使いやすくなる拡張機能セット",
   "extensions": [
     {
@@ -17,7 +16,7 @@
             "//*.booth.pm/items/*"
           ],
           "files": [
-            "dist/dark-mode/style.css"
+            "/dist/dark-mode/style.css"
           ]
         }
       ]
@@ -37,8 +36,8 @@
             "//*.booth.pm/items/*"
           ],
           "files": [
-            "dist/item-preview/style.css",
-            "dist/item-preview/preview.js"
+            "/dist/item-preview/style.css",
+            "/dist/item-preview/preview.js"
           ]
         }
       ]
@@ -57,7 +56,7 @@
             "//checkout.booth.pm/checkout/step1"
           ],
           "files": [
-            "dist/hide-credit/style.css"
+            "/dist/hide-credit/style.css"
           ]
         }
       ]
@@ -76,7 +75,7 @@
             "<all_pages>"
           ],
           "files": [
-            "dist/hide-nsfw/style.css"
+            "/dist/hide-nsfw/style.css"
           ]
         },
         {
@@ -84,7 +83,7 @@
             "//booth.pm/ja"
           ],
           "files": [
-            "dist/hide-nsfw/scripts/main.js"
+            "/dist/hide-nsfw/scripts/main.js"
           ]
         }
       ]
