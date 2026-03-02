@@ -1,9 +1,15 @@
-import { render } from "preact"
-import { App } from "./App"
+import { watchElement } from '#/utils/watchElement'
+import { App } from './App'
+import { render } from 'preact'
 
-const root = document.querySelector("header")!
-console.log(root)
+const pulldown = document.querySelector('#js-user-pulldown > div > div')!
 
-const div = document.createElement("div")
-root.prepend(div)
-render((<App />), div)
+watchElement(pulldown, {
+  when: () => pulldown.children.length > 1,
+  do: () => {
+    const target = document.querySelector("#js-user-pulldown a")!
+    const div = document.createElement('div')
+    target.before(div)
+    render(<App />, div)
+  },
+})

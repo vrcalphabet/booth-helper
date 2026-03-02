@@ -4,12 +4,12 @@
 }
 .js-sticky-header .items-stretch > .hidden,
 .js-sticky-header .items-stretch #show_cart {
-  color: white;
+  color: #fff;
 }
 .market-item-detail-article {
   background-color: #262626;
 }
 .market-item-detail-article,
 .market-item-detail-article header {
-  color: white;
+  color: #fff;
 }
