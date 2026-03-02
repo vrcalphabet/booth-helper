@@ -1,12 +1,45 @@
 "use strict";
 (() => {
-  // src/shared/utils/watchElement.ts
-  function watchElement(target, options) {
-    let prevResult = options.when();
-    prevResult && options.do(), new MutationObserver(() => {
-      let currentResult = options.when();
-      currentResult && !prevResult && options.do(), prevResult = currentResult;
-    }).observe(target, { childList: !0 });
+  var __async = (__this, __arguments, generator) => new Promise((resolve, reject) => {
+    var fulfilled = (value) => {
+      try {
+        step(generator.next(value));
+      } catch (e2) {
+        reject(e2);
+      }
+    }, rejected = (value) => {
+      try {
+        step(generator.throw(value));
+      } catch (e2) {
+        reject(e2);
+      }
+    }, step = (x2) => x2.done ? resolve(x2.value) : Promise.resolve(x2.value).then(fulfilled, rejected);
+    step((generator = generator.apply(__this, __arguments)).next());
+  });
+
+  // src/shared/utils/element.ts
+  function watchElement(options) {
+    return __async(this, null, function* () {
+      let target = typeof options.target == "string" ? yield waitForElement(options.target) : options.target, prevResult = options.when(target);
+      prevResult && options.do(target), new MutationObserver(() => {
+        let currentResult = options.when(target);
+        currentResult && !prevResult && options.do(target), prevResult = currentResult;
+      }).observe(target, { childList: !0 });
+    });
+  }
+  function waitForElement(query) {
+    return new Promise((resolve) => {
+      let findElement = () => document.querySelector(query), element = findElement();
+      if (element) return resolve(element);
+      let observer = new MutationObserver(() => {
+        let element2 = findElement();
+        element2 && (observer.disconnect(), resolve(element2));
+      });
+      observer.observe(document.body, {
+        childList: !0,
+        subtree: !0
+      });
+    });
   }
 
   // node_modules/preact/dist/preact.module.js
@@ -261,9 +294,9 @@
   }
 
   // src/hide-nsfw/scripts/main.tsx
-  var pulldown = document.querySelector("#js-user-pulldown > div > div");
-  watchElement(pulldown, {
-    when: () => pulldown.children.length > 1,
+  watchElement({
+    target: "#js-user-pulldown > div > div",
+    when: (target) => target.children.length > 1,
     do: () => {
       let target = document.querySelector("#js-user-pulldown a"), div = document.createElement("div");
       target.before(div), J(/* @__PURE__ */ u2(App, {}), div);
