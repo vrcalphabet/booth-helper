@@ -15,11 +15,12 @@
     "booth-extension-builder": "file:../booth-extension-builder",
     "clsx": "^2.1.1",
     "preact": "^10.28.4",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/react": "^19.2.14",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.1",
+    "vite": "^7.3.1"
   }
 }
