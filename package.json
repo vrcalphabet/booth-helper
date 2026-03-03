@@ -15,6 +15,7 @@
     "booth-extension-builder": "file:../booth-extension-builder",
     "clsx": "^2.1.1",
     "preact": "^10.28.4",
+    "react-shadow-scope": "^2.0.3",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
