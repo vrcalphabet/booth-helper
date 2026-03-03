@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/dark-mode/style.scss"],
+  "sourcesContent": [".js-sticky-header {\r\n  background-color: #3a3a3a;\r\n\r\n  .items-stretch {\r\n    > .hidden,\r\n    #show_cart {\r\n      color: white;\r\n    }\r\n  }\r\n}\r\n\r\n.market-item-detail-article {\r\n  background-color: #262626;\r\n\r\n  &,\r\n  & header {\r\n    color: white;\r\n  }\r\n}\r\n"],
+  "mappings": "AAAA,CAAA,iBACE,iBAAA,QAGE,CAJJ,iBAII,CAAA,aAAA,CAAA,CAAA,OAAA,CAJJ,iBAII,CAAA,cAAA,CAAA,UAEE,MAAA,KAKN,CAAA,2BACE,iBAAA,QAEA,CAHF,2BAGE,CAHF,2BAGE,OAEE,MAAA",
+  "names": []
+}

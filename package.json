@@ -4,7 +4,8 @@
   "private": true,
   "description": "",
   "scripts": {
-    "build": "npx booth-extension-builder"
+    "build": "npx booth-extension-builder",
+    "format": "prettier --write \"src/**\""
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,9 @@
   "type": "module",
   "dependencies": {
     "booth-extension-builder": "file:../booth-extension-builder",
-    "preact": "^10.28.4"
+    "clsx": "^2.1.1",
+    "preact": "^10.28.4",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",

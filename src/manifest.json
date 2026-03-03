@@ -58,7 +58,7 @@
       "contents": [
         {
           "matches": ["<all_pages>"],
-          "files": ["style.scss"]
+          "files": ["styles/style.scss"]
         },{
           "matches": ["//booth.pm/ja"],
           "files": ["scripts/main.tsx"]

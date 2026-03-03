@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/item-preview/test.js", "../../src/item-preview/preview.js"],
+  "sourcesContent": ["console.log('test.js imported!');", "console.log('Item Preview Script Loaded!');\r\nimport './test';\r\n"],
+  "mappings": "mBAAA,QAAQ,IAAI,mBAAmB,ECA/B,QAAQ,IAAI,6BAA6B",
+  "names": []
+}
