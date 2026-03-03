@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/hide-credit/style.css"],
-  "sourcesContent": ["[data-payment-type='pixivpay_gmo_card'] > .typography-14 {\r\n  text-shadow: -9px 0 0 black, 9px 0 0 black;\r\n  filter: blur(9px);\r\n  opacity: 0.5;\r\n  user-select: none;\r\n}\r\n"],
-  "mappings": "AAAA,CAAC,oCAAuC,CAAE,CAAC,cACzC,YAAa,KAAK,EAAE,EAAE,KAAK,CAAE,IAAI,EAAE,EAAE,MACrC,OAAQ,KAAK,KACb,QAAS,GACT,YAAa,IACf",
-  "names": []
-}
