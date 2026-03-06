@@ -6,11 +6,12 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
+
   --color-primary: red;
 }
 
-:root {
+:host {
   all: initial;
+  display: contents;
   --radius: 0.625rem;
 }
