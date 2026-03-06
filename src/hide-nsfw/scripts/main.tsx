@@ -7,8 +7,10 @@ watchElement({
   when: (target) => target.children.length > 1,
   do: () => {
     const target = document.querySelector('#js-user-pulldown a')!
-    const div = document.createElement('div')
-    target.before(div)
-    render(<App />, div)
+    const root = document.createElement('div')
+    target.before(root)
+
+    const shadowRoot = root.attachShadow({ mode: 'open' })
+    render(<App />, shadowRoot)
   },
 })
