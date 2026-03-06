@@ -6,7 +6,10 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --color-primary: red;
+  --color-primary: #fc4d50;
+  --color-secondary: #2c9ba6;
+  --color-toggle-on: #5ccbd2;
+  --color-toggle-off: #afb2bd;
 }
 
 :host {
