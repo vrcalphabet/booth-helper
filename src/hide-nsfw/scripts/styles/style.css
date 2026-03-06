@@ -1,14 +1,16 @@
 @layer theme, base, components, utilities;
-@import "tailwindcss/utilities.css" layer(utilities);
+@import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
   --color-primary: red;
 }
 
 :root {
+  all: initial;
   --radius: 0.625rem;
 }
