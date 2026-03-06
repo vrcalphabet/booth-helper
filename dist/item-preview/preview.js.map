@@ -1,1 +1,0 @@
-{"version":3,"file":"preview.js","sources":["../../src/item-preview/test.js","../../src/item-preview/preview.js"],"sourcesContent":["console.log('test.js imported!');","console.log('Item Preview Script Loaded!');\r\nimport './test';\r\n"],"names":[],"mappings":"AAAA,QAAQ,IAAI,mBAAmB,ECA/B,QAAQ,IAAI,6BAA6B"}
