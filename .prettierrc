@@ -3,6 +3,17 @@
   "semi": false,
   "printWidth": 85,
   "checkIgnorePragma": true,
-  "experimentalTernaries": false,
-  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+  "experimentalTernaries": true,
+  "importOrder": [
+    "^p?react",
+    "<THIRD_PARTY_MODULES>",
+    "^(?!.*\\.\\w+$)#shared/",
+    "^(?!.*\\.\\w+$)\\.\\./",
+    "^(?!.*\\.\\w+$)\\./",
+    "\\.\\w+$"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true,
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"]
 }

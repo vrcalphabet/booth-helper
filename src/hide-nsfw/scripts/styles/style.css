@@ -14,6 +14,26 @@
 
 :host {
   all: initial;
-  display: contents;
   --radius: 0.625rem;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Avenir,
+    Helvetica Neue,
+    Segoe UI,
+    Arial,
+    ヒラギノ角ゴ ProN,
+    Hiragino Kaku Gothic ProN,
+    メイリオ,
+    Meiryo,
+    ＭＳ Ｐゴシック,
+    sans-serif;
+}
+
+button,
+[role='checkbox'] {
+  cursor: pointer;
 }

@@ -1,15 +1,14 @@
+import { type Dispatch, type StateUpdater } from 'preact/hooks'
 import type { AsyncOrSync } from '#/types/utils'
 import { cn } from '#/utils/cn'
-import { useState } from 'preact/hooks'
 
 interface ToggleProps {
-  defaultChecked?: boolean
+  checked: boolean
+  setChecked: Dispatch<StateUpdater<boolean>>
   onClick?: (checked: boolean) => AsyncOrSync<boolean | void>
 }
 
-export function Toggle({ defaultChecked = false, onClick }: ToggleProps) {
-  const [checked, setChecked] = useState(defaultChecked)
-
+export function Toggle({ checked, setChecked, onClick }: ToggleProps) {
   const clickHandler = async () => {
     const nextChecked = !checked
     setChecked(nextChecked)

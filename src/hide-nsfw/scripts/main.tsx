@@ -1,6 +1,9 @@
+import { waitForDOMContentLoaded } from '#/utils/dom'
 import { watchElement } from '#/utils/element'
 import { App } from './App'
 import { render } from 'preact'
+
+await waitForDOMContentLoaded()
 
 watchElement({
   target: '#js-user-pulldown > div > div',
