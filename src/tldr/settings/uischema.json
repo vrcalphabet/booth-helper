@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../uischema.schema.json",
+  "apiKey": {
+    "ui:widget": "password",
+    "ui:placeholder": "ここにAPIキーを貼り付け",
+    "ui:help": "APIキーは、[Google AI Studio](https://aistudio.google.com/api-keys) から生成できます。"
+  }
+}

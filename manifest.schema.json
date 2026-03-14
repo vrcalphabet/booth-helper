@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
     "$schema": {
@@ -77,6 +77,29 @@
               "additionalProperties": false,
               "required": ["matches", "files"]
             }
+          },
+          "settings": {
+            "type": "object",
+            "description": "設定画面とその項目の一覧が定義されているスキーマ。",
+            "properties": {
+              "schema": {
+                "type": "string",
+                "description": "設定項目が定義されているスキーマ",
+                "pattern": "^([\\w-]+/)*[\\w-]+\\.json$"
+              },
+              "uischema": {
+                "type": "string",
+                "description": "設定画面が定義されているスキーマ",
+                "pattern": "^([\\w-]+/)*[\\w-]+\\.json$"
+              },
+              "formdata": {
+                "type": "string",
+                "description": "設定項目の初期値が定義されているスキーマ",
+                "pattern": "^([\\w-]+/)*[\\w-]+\\.json$"
+              }
+            },
+            "additionalProperties": false,
+            "required": ["schema", "uischema", "formdata"]
           }
         },
         "additionalProperties": false,

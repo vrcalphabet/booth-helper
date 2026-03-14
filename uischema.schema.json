@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rjsf-team.github.io/react-jsonschema-form/docs/api-reference/uiSchema",
+  "title": "react-jsonschema-form uiSchema",
+  "description": "react-jsonschema-formのuiSchemaの検証用スキーマです。",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "使用するJSONスキーマのURIです。"
+    }
+  },
+  "$defs": {
+    "uiSchemaNode": {
+      "type": "object",
+      "description": "各プロパティのuiSchemaへのプロパティ名のマップです。",
+      "properties": {
+        "ui:widget": {
+          "type": ["string", "object"],
+          "description": "値に使用するウィジェットを指定する文字列、または設定オブジェクトです。"
+        },
+        "ui:field": {
+          "type": ["string", "object"],
+          "description": "スキーマをレンダリングするためのカスタムフィールドを指定する文字列、または設定オブジェクトです。"
+        },
+        "ui:placeholder": {
+          "type": "string",
+          "description": "入力欄に表示される既定のプレースホルダー文字列です。"
+        },
+        "ui:description": {
+          "type": "string",
+          "description": "フィールドの詳しい説明です。UIに表示されます。"
+        },
+        "ui:classNames": {
+          "type": "string",
+          "description": "フィールドに付与するカスタムCSSクラス名の文字列です。"
+        },
+        "ui:options": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "ウィジェットやフィールドごとの追加オプションへのプロパティ名のマップです。"
+        },
+        "ui:readonly": {
+          "type": "boolean",
+          "description": "フィールドが読み取り専用であるかどうかを示すフラグです。"
+        },
+        "ui:disabled": {
+          "type": "boolean",
+          "description": "フィールドが無効化されているかどうかを示すフラグです。"
+        },
+        "ui:autofocus": {
+          "type": "boolean",
+          "description": "レンダリング時にフィールドへ自動的にフォーカスするかどうかを示すフラグです。"
+        },
+        "ui:enumNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "列挙型の選択肢に対する、説明的な名前の配列です。"
+        },
+        "ui:title": {
+          "type": "string",
+          "description": "フィールドの説明的なタイトルです。"
+        },
+        "ui:style": {
+          "type": "object",
+          "description": "フィールドに適用するインラインスタイルのマップです。"
+        },
+        "ui:emptyValue": {
+          "description": "フィールドが空のときに使用される既定値です。"
+        },
+        "ui:help": {
+          "type": "string",
+          "description": "フィールドのヘルプテキストです。"
+        },
+        "ui:order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "このオブジェクトに表示するプロパティ名の順序を一覧表示する文字列の配列です。"
+        },
+        "ui:rootFieldId": {
+          "type": "string",
+          "description": "ルートフィールドの一意の識別子です。"
+        },
+        "ui:globalOptions": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "すべてのフィールドに適用されるグローバルなオプションのマップです。"
+        },
+        "ui:submitButtonOptions": {
+          "type": "object",
+          "description": "送信ボタンの設定オプションのマップです。",
+          "properties": {
+            "submitText": {
+              "type": "string",
+              "description": "送信ボタンに表示されるテキストです。"
+            },
+            "norender": {
+              "type": "boolean",
+              "description": "送信ボタンのレンダリングを無効にするかどうかのフラグです。"
+            },
+            "props": {
+              "type": "object",
+              "description": "送信ボタンに渡される追加のプロパティのマップです。"
+            }
+          }
+        },
+        "ui:FieldTemplate": {
+          "type": ["string", "object"],
+          "description": "フィールドのレンダリングに使用するテンプレートです。"
+        },
+        "ui:ArrayFieldTemplate": {
+          "type": ["string", "object"],
+          "description": "配列フィールドのレンダリングに使用するテンプレートです。"
+        },
+        "ui:ObjectFieldTemplate": {
+          "type": ["string", "object"],
+          "description": "オブジェクトフィールドのレンダリングに使用するテンプレートです。"
+        },
+        "ui:BaseInputTemplate": {
+          "type": ["string", "object"],
+          "description": "基本入力フィールドのレンダリングに使用するテンプレートです。"
+        },
+        "ui:ErrorListTemplate": {
+          "type": ["string", "object"],
+          "description": "エラーリストのレンダリングに使用するテンプレートです。"
+        },
+        "items": {
+          "$ref": "#/$defs/uiSchemaNode",
+          "description": "配列の項目に適用されるuiSchemaノードです。"
+        },
+        "additionalItems": {
+          "$ref": "#/$defs/uiSchemaNode",
+          "description": "配列の追加項目に適用されるuiSchemaノードです。"
+        }
+      },
+      "patternProperties": {
+        "^(?!ui:|items$|additionalItems$|\\$schema$).+": {
+          "$ref": "#/$defs/uiSchemaNode",
+          "description": "キーで指定されたプロパティがオブジェクトに存在する場合にのみ適用されるスキーマへのプロパティ名のマップです。"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/uiSchemaNode"
+    }
+  ]
+}

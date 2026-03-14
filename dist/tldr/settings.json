@@ -1,0 +1,25 @@
+{
+  "schema": {
+    "title": "APIキーの設定",
+    "type": "object",
+    "required": [
+      "apiKey"
+    ],
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "title": "Gemini API Key",
+        "minLength": 39,
+        "maxLength": 39
+      }
+    }
+  },
+  "uischema": {
+    "apiKey": {
+      "ui:widget": "password",
+      "ui:placeholder": "ここにAPIキーを貼り付け",
+      "ui:help": "APIキーは、[Google AI Studio](https://aistudio.google.com/api-keys) から生成できます。"
+    }
+  },
+  "formdata": {}
+}

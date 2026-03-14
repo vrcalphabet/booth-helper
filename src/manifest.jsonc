@@ -64,6 +64,26 @@
           "files": ["scripts/main.tsx"]
         }
       ]
+    },
+    {
+      "id": "tldr",
+      "name": "メッセージを今北産業するやつ",
+      "description": "",
+      "version": "1.0.0",
+      "author": "あるふぁべっと",
+      "published_at": "2026-03-12",
+      "updated_at": "2026-03-12",
+      "contents": [
+        {
+          "matches": ["<all_pages>"],
+          "files": ["main.ts"]
+        }
+      ],
+      "settings": {
+        "schema": "settings/schema.json",
+        "uischema": "settings/uischema.json",
+        "formdata": "settings/formdata.json"
+      }
     }
   ]
 }

@@ -15,21 +15,9 @@
 :host {
   all: initial;
   --radius: 0.625rem;
-}
-
-body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    Avenir,
-    Helvetica Neue,
-    Segoe UI,
-    Arial,
-    ヒラギノ角ゴ ProN,
-    Hiragino Kaku Gothic ProN,
-    メイリオ,
-    Meiryo,
-    ＭＳ Ｐゴシック,
+  --default-font-family:
+    -apple-system, BlinkMacSystemFont, Avenir, Helvetica Neue, Segoe UI, Arial,
+    ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳ Ｐゴシック,
     sans-serif;
 }
 
