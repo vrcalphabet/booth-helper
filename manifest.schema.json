@@ -87,19 +87,19 @@
                 "description": "設定項目が定義されているスキーマ",
                 "pattern": "^([\\w-]+/)*[\\w-]+\\.json$"
               },
-              "uischema": {
+              "uiSchema": {
                 "type": "string",
                 "description": "設定画面が定義されているスキーマ",
                 "pattern": "^([\\w-]+/)*[\\w-]+\\.json$"
               },
-              "formdata": {
+              "formData": {
                 "type": "string",
                 "description": "設定項目の初期値が定義されているスキーマ",
                 "pattern": "^([\\w-]+/)*[\\w-]+\\.json$"
               }
             },
             "additionalProperties": false,
-            "required": ["schema", "uischema", "formdata"]
+            "required": ["schema", "uiSchema", "formData"]
           }
         },
         "additionalProperties": false,

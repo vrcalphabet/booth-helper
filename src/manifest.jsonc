@@ -81,8 +81,8 @@
       ],
       "settings": {
         "schema": "settings/schema.json",
-        "uischema": "settings/uischema.json",
-        "formdata": "settings/formdata.json"
+        "uiSchema": "settings/uiSchema.json",
+        "formData": "settings/formData.json"
       }
     }
   ]

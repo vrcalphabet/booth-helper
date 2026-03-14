@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../uischema.schema.json",
+  "$schema": "../../../uiSchema.schema.json",
   "ui:globalOptions": {
     "enableMarkdownInDescription": true,
     "enableMarkdownInHelp": true

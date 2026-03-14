@@ -14,7 +14,7 @@
       }
     }
   },
-  "uischema": {
+  "uiSchema": {
     "ui:globalOptions": {
       "enableMarkdownInDescription": true,
       "enableMarkdownInHelp": true
@@ -25,5 +25,5 @@
       "ui:help": "APIキーは、[Google AI Studio](https://aistudio.google.com/api-keys) から生成できます。"
     }
   },
-  "formdata": {}
+  "formData": {}
 }
