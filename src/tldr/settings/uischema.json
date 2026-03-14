@@ -1,5 +1,9 @@
 {
   "$schema": "../../../uischema.schema.json",
+  "ui:globalOptions": {
+    "enableMarkdownInDescription": true,
+    "enableMarkdownInHelp": true
+  },
   "apiKey": {
     "ui:widget": "password",
     "ui:placeholder": "ここにAPIキーを貼り付け",
