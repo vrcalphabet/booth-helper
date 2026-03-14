@@ -26,8 +26,7 @@
             "/dist/hide-nsfw/scripts/main.js"
           ]
         }
-      ],
-      "settings": "/dist/hide-nsfw/settings.json"
+      ]
     },
     {
       "id": "tldr",
