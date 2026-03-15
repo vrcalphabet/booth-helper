@@ -1,0 +1,23 @@
+{
+  "name": "aaaaa",
+  "password": "secretpassword",
+  "email": "sonata@example.com [[[[[",
+  "age": 951,
+  "height": 165.5,
+  "job": "戦士",
+  "skills": [
+    "剣術"
+  ],
+  "partyMembers": [
+    {}
+  ],
+  "stats": {
+    "str": 10,
+    "int": 5
+  },
+  "color": "#ff0000",
+  "dateOfBirth": "2010-01-01",
+  "biography": "ただの村人Aじゃ。",
+  "isActive": false,
+  "agreed": true
+}

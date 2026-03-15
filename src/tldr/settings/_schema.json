@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "冒険者ギルド 登録票",
+  "description": "全く、こんな面倒な手続き、わしがやる必要あるのか？……まあよい、特別に用意してやったのじゃ。さっさと書くがよいぞ。",
+  "type": "object",
+  "required": [
+    "name",
+    "password",
+    "agreed"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "名前",
+      "minLength": 2
+    },
+    "password": {
+      "type": "string",
+      "title": "合言葉（パスワード）",
+      "minLength": 8
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "連絡用魔法陣のアドレス（メール）"
+    },
+    "avatar": {
+      "type": "string",
+      "format": "data-url",
+      "title": "似顔絵（ファイルアップロード）"
+    },
+    "age": {
+      "type": "integer",
+      "title": "年齢（スライダー）",
+      "minimum": 10,
+      "maximum": 1000
+    },
+    "height": {
+      "type": "number",
+      "title": "身長(cm)（スピンボックス）",
+      "multipleOf": 0.1
+    },
+    "job": {
+      "type": "string",
+      "title": "職業（ラジオボタン）",
+      "enum": [
+        "戦士",
+        "魔法使い",
+        "僧侶",
+        "盗賊"
+      ],
+      "default": "魔法使い"
+    },
+    "skills": {
+      "type": "array",
+      "title": "習得スキル（複数選択チェックボックス）",
+      "items": {
+        "type": "string",
+        "enum": [
+          "火炎魔法",
+          "回復魔法",
+          "剣術",
+          "隠密",
+          "鑑定"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "partyMembers": {
+      "type": "array",
+      "title": "パーティメンバー（オブジェクト配列）",
+      "items": {
+        "type": "object",
+        "properties": {
+          "memberName": {
+            "type": "string",
+            "title": "メンバー名"
+          },
+          "memberJob": {
+            "type": "string",
+            "title": "職業"
+          }
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "title": "初期ステータス（ネストされたオブジェクト）",
+      "properties": {
+        "str": {
+          "type": "integer",
+          "title": "筋力"
+        },
+        "int": {
+          "type": "integer",
+          "title": "知力"
+        }
+      }
+    },
+    "color": {
+      "type": "string",
+      "title": "イメージカラー（カラーピッカー）"
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date",
+      "title": "生年月日（日付選択）"
+    },
+    "biography": {
+      "type": "string",
+      "title": "生い立ち（テキストエリア）"
+    },
+    "isActive": {
+      "type": "boolean",
+      "title": "現在活動中（チェックボックス）",
+      "default": true
+    },
+    "agreed": {
+      "type": "boolean",
+      "title": "ギルド規約に同意する"
+    }
+  }
+}

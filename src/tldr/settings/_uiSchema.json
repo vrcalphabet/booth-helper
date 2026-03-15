@@ -1,0 +1,44 @@
+{
+  "$schema": "../../../uiSchema.schema.json",
+  "password": {
+    "ui:widget": "password",
+    "ui:help": "誰にも教えるでないぞ！"
+  },
+  "age": {
+    "ui:widget": "range",
+    "ui:description": "わしより年上はおらぬじゃろうがな。"
+  },
+  "height": {
+    "ui:widget": "updown"
+  },
+  "job": {
+    "ui:widget": "radio",
+    "ui:options": {
+      "inline": true
+    }
+  },
+  "skills": {
+    "ui:widget": "checkboxes",
+    "ui:options": {
+      "inline": true
+    }
+  },
+  "biography": {
+    "ui:widget": "textarea",
+    "ui:options": {
+      "rows": 5
+    },
+    "ui:placeholder": "ここに昔話でも書くがよい。"
+  },
+  "color": {
+    "ui:widget": "color"
+  },
+  "partyMembers": {
+    "ui:options": {
+      "orderable": false
+    }
+  },
+  "agreed": {
+    "ui:widget": "radio"
+  }
+}

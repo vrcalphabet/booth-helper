@@ -8,7 +8,7 @@
   "properties": {
     "apiKey": {
       "type": "string",
-      "title": "Gemini API Key",
+      "title": "Gemini APIキー",
       "minLength": 39,
       "maxLength": 39
     }

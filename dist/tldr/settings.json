@@ -1,29 +1,190 @@
 {
   "schema": {
-    "title": "APIキーの設定",
+    "title": "冒険者ギルド 登録票",
+    "description": "全く、こんな面倒な手続き、わしがやる必要あるのか？……まあよい、特別に用意してやったのじゃ。さっさと書くがよいぞ。",
     "type": "object",
     "required": [
-      "apiKey"
+      "name",
+      "password",
+      "agreed"
     ],
     "properties": {
-      "apiKey": {
+      "name": {
         "type": "string",
-        "title": "Gemini API Key",
-        "minLength": 39,
-        "maxLength": 39
+        "title": "名前",
+        "minLength": 2
+      },
+      "password": {
+        "type": "string",
+        "title": "合言葉（パスワード）",
+        "minLength": 8
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "title": "連絡用魔法陣のアドレス（メール）"
+      },
+      "avatar": {
+        "type": "string",
+        "format": "data-url",
+        "title": "似顔絵（ファイルアップロード）"
+      },
+      "age": {
+        "type": "integer",
+        "title": "年齢（スライダー）",
+        "minimum": 10,
+        "maximum": 1000
+      },
+      "height": {
+        "type": "number",
+        "title": "身長(cm)（スピンボックス）",
+        "multipleOf": 0.1
+      },
+      "job": {
+        "type": "string",
+        "title": "職業（ラジオボタン）",
+        "enum": [
+          "戦士",
+          "魔法使い",
+          "僧侶",
+          "盗賊"
+        ],
+        "default": "魔法使い"
+      },
+      "skills": {
+        "type": "array",
+        "title": "習得スキル（複数選択チェックボックス）",
+        "items": {
+          "type": "string",
+          "enum": [
+            "火炎魔法",
+            "回復魔法",
+            "剣術",
+            "隠密",
+            "鑑定"
+          ]
+        },
+        "uniqueItems": true
+      },
+      "partyMembers": {
+        "type": "array",
+        "title": "パーティメンバー（オブジェクト配列）",
+        "items": {
+          "type": "object",
+          "properties": {
+            "memberName": {
+              "type": "string",
+              "title": "メンバー名"
+            },
+            "memberJob": {
+              "type": "string",
+              "title": "職業"
+            }
+          }
+        }
+      },
+      "stats": {
+        "type": "object",
+        "title": "初期ステータス（ネストされたオブジェクト）",
+        "properties": {
+          "str": {
+            "type": "integer",
+            "title": "筋力"
+          },
+          "int": {
+            "type": "integer",
+            "title": "知力"
+          }
+        }
+      },
+      "color": {
+        "type": "string",
+        "title": "イメージカラー（カラーピッカー）"
+      },
+      "dateOfBirth": {
+        "type": "string",
+        "format": "date",
+        "title": "生年月日（日付選択）"
+      },
+      "biography": {
+        "type": "string",
+        "title": "生い立ち（テキストエリア）"
+      },
+      "isActive": {
+        "type": "boolean",
+        "title": "現在活動中（チェックボックス）",
+        "default": true
+      },
+      "agreed": {
+        "type": "boolean",
+        "title": "ギルド規約に同意する"
       }
     }
   },
   "uiSchema": {
-    "ui:globalOptions": {
-      "enableMarkdownInDescription": true,
-      "enableMarkdownInHelp": true
-    },
-    "apiKey": {
+    "password": {
       "ui:widget": "password",
-      "ui:placeholder": "ここにAPIキーを貼り付け",
-      "ui:help": "APIキーは、[Google AI Studio](https://aistudio.google.com/api-keys) から生成できます。"
+      "ui:help": "誰にも教えるでないぞ！"
+    },
+    "age": {
+      "ui:widget": "range",
+      "ui:description": "わしより年上はおらぬじゃろうがな。"
+    },
+    "height": {
+      "ui:widget": "updown"
+    },
+    "job": {
+      "ui:widget": "radio",
+      "ui:options": {
+        "inline": true
+      }
+    },
+    "skills": {
+      "ui:widget": "checkboxes",
+      "ui:options": {
+        "inline": true
+      }
+    },
+    "biography": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 5
+      },
+      "ui:placeholder": "ここに昔話でも書くがよい。"
+    },
+    "color": {
+      "ui:widget": "color"
+    },
+    "partyMembers": {
+      "ui:options": {
+        "orderable": false
+      }
+    },
+    "agreed": {
+      "ui:widget": "radio"
     }
   },
-  "formData": {}
+  "formData": {
+    "name": "aaaaa",
+    "password": "secretpassword",
+    "email": "sonata@example.com [[[[[",
+    "age": 951,
+    "height": 165.5,
+    "job": "戦士",
+    "skills": [
+      "剣術"
+    ],
+    "partyMembers": [
+      {}
+    ],
+    "stats": {
+      "str": 10,
+      "int": 5
+    },
+    "color": "#ff0000",
+    "dateOfBirth": "2010-01-01",
+    "biography": "ただの村人Aじゃ。",
+    "isActive": false,
+    "agreed": true
+  }
 }
